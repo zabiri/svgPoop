@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Poop</title>
+	</head>
+	<body>
+		<object type="image/svg+xml" data="poop.svg" id="myPoop">
+			poop logo
+			<!-- fallback image in CSS -->
+		</object>
+		<script type="text/javascript">
+			var poopSVG = document.querySelector("#myPoop");
+			var innerSVG;
+			poopSVG.addEventListener("load", function() {
+				innerSVG = poopSVG.contentDocument;
+				console.log(innerSVG);
+				var innerPath = innerSVG.querySelector("#turdPath");
+				console.log(innerPath);
+				innerPath.style.stroke = "red";
+				innerPath.style.fill = "red";
+			});
+			console.log(poopSVG);
+		</script>
+	</body>
+</html>
