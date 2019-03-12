@@ -16,8 +16,10 @@
 			var innerSVG;
 			poopSVG.addEventListener("load", function() {
 				innerSVG = poopSVG.contentDocument;
+        console.log("Inner SVG Content ⬇️");
 				console.log(innerSVG);
 				var innerPath = innerSVG.querySelector("#turdPath");
+        console.log("the path of poo 💩: ")
 				console.log(innerPath);
 				innerPath.style.stroke = "red";
 				innerPath.style.fill = "red";
